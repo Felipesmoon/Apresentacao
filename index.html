@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceará — Perspectiva Econômica & Futuro</title>
+  <meta name="description"
+    content="Uma apresentação imersiva sobre a situação econômica, motores de crescimento e perspectivas futuras do Ceará, Brasil." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="main-nav">
+    <div class="nav-brand">
+      <span class="nav-logo">CE</span>
+      <span class="nav-title">ECONOMIA DO CEARÁ</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#overview">Visão Geral</a></li>
+      <li><a href="#sectors">Setores</a></li>
+      <li><a href="#future">Futuro</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#routes-map">Mapa</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img src="images/fortaleza_skyline.png" alt="Fortaleza Skyline" id="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" id="hero-eyebrow">PERSPECTIVA ECONÔMICA 2026</p>
+      <h1 id="hero-title">
+        <span class="hero-line">A Ascensão do</span>
+        <span class="hero-line hero-accent">Ceará</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">Do Nordeste Brasileiro a Hub Global de Energia Verde — uma
+        transformação econômica redefinindo o futuro da América Latina.</p>
+      <div class="hero-stats" id="hero-stats">
+        <div class="hero-stat-card glass-card">
+          <span class="stat-value" data-target="2.9">0</span><span class="stat-unit"> %</span>
+          <span class="stat-label">Crescimento do PIB 2025</span>
+        </div>
+        <div class="hero-stat-card glass-card">
+          <span class="stat-value" data-target="9.3">0</span><span class="stat-unit"> M</span>
+          <span class="stat-label">População</span>
+        </div>
+        <div class="hero-stat-card glass-card">
+          <span class="stat-value" data-target="63">0</span><span class="stat-unit"> Bi</span>
+          <span class="stat-label">Investimentos em H₂V (R$)</span>
+        </div>
+        <div class="hero-stat-card glass-card">
+          <span class="stat-value" data-target="6.4">0</span><span class="stat-unit"> %</span>
+          <span class="stat-label">Desemprego (Mínima Histórica)</span>
+        </div>
+      </div>
+      <a href="#overview" class="hero-cta" id="hero-cta">
+        <span>Explorar os Dados</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OVERVIEW SECTION ===================== -->
+  <section id="overview" class="section">
+    <div class="section-header">
+      <span class="section-tag">VISÃO MACRO</span>
+      <h2 class="section-title">Desempenho<br /><span class="text-gradient">Econômico</span></h2>
+      <p class="section-desc">O Ceará supera consistentemente as médias nacionais, registrando um crescimento do PIB de
+        2,9% em 2025 contra ~2,0% do Brasil.</p>
+    </div>
+
+    <div class="overview-grid">
+      <!-- GDP Chart Card -->
+      <div class="overview-card glass-card card-wide" id="gdp-card">
+        <div class="card-header">
+          <h3>Crescimento do PIB — Ceará vs Brasil</h3>
+          <span class="card-badge">Superando</span>
+        </div>
+        <div class="chart-container" id="gdp-chart">
+          <div class="bar-chart">
+            <div class="bar-group">
+              <span class="bar-label">2023</span>
+              <div class="bar-row">
+                <div class="bar ceara" data-value="2.5" style="--bar-color: var(--accent-primary)"><span>CE 2.5%</span>
+                </div>
+                <div class="bar brazil" data-value="2.9" style="--bar-color: var(--text-muted)"><span>BR 2.9%</span>
+                </div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <span class="bar-label">2024</span>
+              <div class="bar-row">
+                <div class="bar ceara" data-value="3.1" style="--bar-color: var(--accent-primary)"><span>CE 3.1%</span>
+                </div>
+                <div class="bar brazil" data-value="3.2" style="--bar-color: var(--text-muted)"><span>BR 3.2%</span>
+                </div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <span class="bar-label">2025</span>
+              <div class="bar-row">
+                <div class="bar ceara" data-value="2.9" style="--bar-color: var(--accent-primary)"><span>CE 2.9%</span>
+                </div>
+                <div class="bar brazil" data-value="2.0" style="--bar-color: var(--text-muted)"><span>BR 2.0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <span class="bar-label">2026 (proj.)</span>
+              <div class="bar-row">
+                <div class="bar ceara" data-value="2.8" style="--bar-color: var(--accent-primary)"><span>CE 2.8%</span>
+                </div>
+                <div class="bar brazil" data-value="1.8" style="--bar-color: var(--text-muted)"><span>BR 1.8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot"
+                style="background:var(--accent-primary)"></span>Ceará</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--text-muted)"></span>Brasil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sector Performance -->
+      <div class="overview-card glass-card" id="sector-card">
+        <div class="card-header">
+          <h3>Crescimento Setorial 1T 2026</h3>
+        </div>
+        <div class="sector-rings">
+          <div class="ring-item">
+            <div class="ring" data-percent="72" style="--ring-color: var(--green-accent)">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52" />
+                <circle class="ring-fill" cx="60" cy="60" r="52" />
+              </svg>
+              <span class="ring-value">3.60%</span>
+            </div>
+            <span class="ring-label">Agropecuária</span>
+          </div>
+          <div class="ring-item">
+            <div class="ring" data-percent="47" style="--ring-color: var(--accent-primary)">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52" />
+                <circle class="ring-fill" cx="60" cy="60" r="52" />
+              </svg>
+              <span class="ring-value">2.35%</span>
+            </div>
+            <span class="ring-label">Serviços</span>
+          </div>
+          <div class="ring-item">
+            <div class="ring" data-percent="10" style="--ring-color: var(--accent-secondary)">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52" />
+                <circle class="ring-fill" cx="60" cy="60" r="52" />
+              </svg>
+              <span class="ring-value">0.15%</span>
+            </div>
+            <span class="ring-label">Indústria</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Labor Market -->
+      <div class="overview-card glass-card" id="labor-card">
+        <div class="card-header">
+          <h3>Mercado de Trabalho</h3>
+          <span class="card-badge positive">Mínima Histórica</span>
+        </div>
+        <div class="labor-metrics">
+          <div class="metric-item">
+            <span class="metric-number">6.5%</span>
+            <span class="metric-desc">Taxa de Desemprego</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">1.279.498</span>
+            <span class="metric-desc">Novos Empregos Formais (2025)</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">> 50%</span>
+            <span class="metric-desc">Taxa de Formalização</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KEY SECTORS ===================== -->
+  <section id="sectors" class="section section-dark">
+    <div class="section-header">
+      <span class="section-tag">MOTORES DE CRESCIMENTO</span>
+      <h2 class="section-title">Setores<br /><span class="text-gradient">Transformadores</span></h2>
+      <p class="section-desc">Megassetores e regiões-chave estão impulsionando a ascensão do Ceará: Hidrogênio Verde,
+        Data Centers, Turismo, exploração de Lítio, Ferrovia Transnordestina, polos regionais como a Serra da Ibiapaba e
+        Energias Renováveis.</p>
+    </div>
+
+    <div class="sectors-showcase">
+      <!-- Green Hydrogen -->
+      <div class="sector-panel glass-card" id="sector-h2v">
+        <div class="sector-visual">
+          <img src="images/hidrogenio-verde-pecem.jpeg" alt="Instalação de Hidrogênio Verde" />
+          <div class="sector-badge">R$ 63 BILHÕES</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="24" r="20" />
+              <text x="24" y="30" text-anchor="middle" fill="currentColor" font-size="18" font-weight="700"
+                stroke="none">H₂</text>
+            </svg>
+          </div>
+          <h3>Hub de Hidrogênio Verde</h3>
+          <p>O Complexo do Pecém abriga <strong>7 pré-contratos</strong> com gigantes globais de energia — Fortescue,
+            EDF, Voltalia e mais. Decisões finais de investimento esperadas para 2026, posicionando o Ceará como o maior
+            produtor de H₂V da América Latina.</p>
+          <ul class="sector-highlights">
+            <li>R$ 63 bilhões em investimentos previstos</li>
+            <li>Parceria estratégica com o Porto de Roterdã</li>
+            <li>Infraestrutura apoiada pelo Banco Mundial</li>
+            <li>Rota marítima mais curta da América do Sul para a Europa</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Data Centers -->
+      <div class="sector-panel glass-card reverse" id="sector-dc">
+        <div class="sector-visual">
+          <img src="images/datacenter-pecem.jpg" alt="Porto do Pecém e Hub Industrial" />
+          <div class="sector-badge">R$ 200–350 Bi</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="8" y="8" width="32" height="10" rx="2" />
+              <rect x="8" y="22" width="32" height="10" rx="2" />
+              <rect x="8" y="36" width="32" height="4" rx="2" />
+              <circle cx="14" cy="13" r="2" fill="currentColor" />
+              <circle cx="14" cy="27" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Data Centers de Hiperescala</h3>
+          <p>Grandes players de tecnologia, incluindo a <strong>ByteDance (TikTok)</strong>, estão construindo
+            instalações de hiperescala no Pecém, com investimentos atingindo de R$ 200 a 350 bilhões ao longo de suas
+            fases. Um marco regulatório dedicado foi aprovado em julho de 2026.</p>
+          <ul class="sector-highlights">
+            <li>Fornecimento de energia 100% renovável</li>
+            <li>Conectividade por cabos submarinos</li>
+            <li>Novo marco de licenciamento ambiental</li>
+            <li>Posicionamento estratégico para a infraestrutura digital da América Latina</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tourism -->
+      <div class="sector-panel glass-card" id="sector-tourism">
+        <div class="sector-visual">
+          <img src="images/turismo.jpg" alt="Costa de Fortaleza" />
+          <div class="sector-badge">IMPACTO DE R$ 24,2 Bi</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4L30 18H44L32 28L36 42L24 34L12 42L16 28L4 18H18L24 4Z" />
+            </svg>
+          </div>
+          <h3>Turismo e Eventos</h3>
+          <p><strong>3,48 milhões de turistas</strong> visitaram em 2025 (+8,35% a/a). As chegadas internacionais
+            aumentaram 17% no 1S 2026. Novas rotas para Lisboa, Madri, Caiena e Montevidéu estão consolidando Fortaleza
+            como um grande hub aéreo.</p>
+          <ul class="sector-highlights">
+            <li>Impacto econômico de R$ 24,2 bilhões em 2025</li>
+            <li>2.000+ eventos corporativos (R$ 1 bilhão em receita)</li>
+            <li>Crescimento de 17% de turistas internacionais no 1S 2026</li>
+            <li>Novas rotas aéreas internacionais em expansão</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lithium Exploration -->
+      <div class="sector-panel glass-card reverse" id="sector-lithium">
+        <div class="sector-visual">
+          <img src="images/litio-ceara.webp" alt="Exploração de Lítio no Ceará" />
+          <div class="sector-badge">NOVO POLO MINERAL</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="24 6 40 18 40 34 24 46 8 34 8 18 24 6" />
+              <circle cx="24" cy="18" r="6" />
+              <line x1="24" y1="24" x2="24" y2="38" />
+              <line x1="18" y1="28" x2="30" y2="28" />
+            </svg>
+          </div>
+          <h3>Exploração de Lítio — Região Central</h3>
+          <p>O Ceará está emergindo como um dos principais polos de exploração de lítio no Brasil. Depósitos
+            significativos foram identificados na <strong>região central do estado</strong>, abrindo caminho para uma
+            nova fronteira mineral com potencial de atrair bilhões em investimentos e posicionar o estado na cadeia
+            global de baterias e veículos elétricos.</p>
+          <ul class="sector-highlights">
+            <li>Quixeramobim com alto teor de lítio</li>
+            <li>Projetos em estágio avançado de pesquisa e licenciamento</li>
+            <li>Potencial para integrar cadeia de valor do H₂ Verde e VEs</li>
+            <li>Geração de empregos diretos e indiretos no interior</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Serra da Ibiapaba -->
+      <div class="sector-panel glass-card" id="sector-ibiapaba">
+        <div class="sector-visual">
+          <img src="images/ubajara-eolica.webp" alt="Serra da Ibiapaba" />
+          <div class="sector-badge">POLO SERRANO</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4L12 24h6v20h12V24h6L24 4z" />
+            </svg>
+          </div>
+          <h3>Serra da Ibiapaba</h3>
+          <p>A região serrana (<strong>Tianguá, São Benedito, Ubajara e Guaraciaba do Norte</strong>) vive um salto em
+            <strong>turismo ecológico e hotelaria</strong>, aliado à força do agronegócio e expansão de parques de
+            <strong>energias renováveis</strong>.
+          </p>
+          <ul class="sector-highlights">
+            <li>Novo mega projeto eólico de R$ 2 bilhões sendo instalado em duas cidades</li>
+            <li>Polo nordestino de hortifrutigranjeiros, floricultura e agricultura regenerativa</li>
+            <li>Forte expansão da rede hoteleira impulsionada pela Rota dos Mirantes</li>
+            <li>Geração híbrida de energia: aproveitamento dos fortes ventos e irradiação solar</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Transnordestina Railway -->
+      <div class="sector-panel glass-card reverse" id="sector-transnordestina">
+        <div class="sector-visual">
+          <img src="images/transnordestina.jpeg" alt="Ferrovia Transnordestina" />
+          <div class="sector-badge">R$ 15,8 BI</div>
+        </div>
+        <div class="sector-info">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="32" x2="44" y2="32" />
+              <line x1="8" y1="20" x2="40" y2="20" />
+              <line x1="12" y1="32" x2="12" y2="20" stroke-width="4" stroke-linecap="round" />
+              <line x1="24" y1="32" x2="24" y2="20" stroke-width="4" stroke-linecap="round" />
+              <line x1="36" y1="32" x2="36" y2="20" stroke-width="4" stroke-linecap="round" />
+              <rect x="4" y="36" width="40" height="8" rx="2" />
+            </svg>
+          </div>
+          <h3>Ferrovia Transnordestina — Eixo Central</h3>
+          <p>A <strong>Ferrovia Transnordestina</strong>, com investimentos de R$ 15,8 bilhões, está transformando a
+            logística da região central do Ceará. O trecho que atravessa o estado conecta o interior produtivo ao Porto
+            do Pecém, viabilizando o escoamento da produção mineral e agrícola com eficiência inédita.</p>
+          <ul class="sector-highlights">
+            <li>Integração com o setor de lítio: escoamento para exportação</li>
+            <li>Conexão direta entre a região central e o Porto do Pecém</li>
+            <li>Redução de custos logísticos e emissões de CO₂</li>
+            <li>Fomento ao desenvolvimento econômico de cidades no trajeto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini Cards Row -->
+    <div class="mini-cards-row">
+      <div class="mini-card glass-card" id="mini-ev">
+        <div class="mini-icon">⚡</div>
+        <h4>Veículos Elétricos</h4>
+        <p>Polo de produção de VE em Horizonte aproveitando os incentivos federais do Mover e a logística do Pecém.</p>
+      </div>
+      <div class="mini-card glass-card" id="mini-lithium">
+        <div class="mini-icon">🔋</div>
+        <h4>Baterias de Lítio</h4>
+        <p>O lítio cearense como matéria-prima para a cadeia de baterias — integrando mineral, energia limpa e VEs.</p>
+      </div>
+      <div class="mini-card glass-card" id="mini-port">
+        <div class="mini-icon">⚓</div>
+        <h4>Modernização Portuária</h4>
+        <p>Investimento de R$ 1,25 bilhão no Pecém: novos píeres, energia em terra (shore power) e logística neutra em
+          carbono.</p>
+      </div>
+      <div class="mini-card glass-card" id="mini-energy">
+        <div class="mini-icon">🌬️</div>
+        <h4>Eólica e Solar</h4>
+        <p>Liderança na geração de energia renovável no Brasil, viabilizando energia 100% limpa para a indústria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FUTURE OUTLOOK ===================== -->
+  <section id="future" class="section">
+    <div class="section-header">
+      <span class="section-tag">OLHANDO PARA O FUTURO</span>
+      <h2 class="section-title">A Trajetória<br /><span class="text-gradient">Futura</span></h2>
+      <p class="section-desc">Da liderança na COP 30 às parcerias globais em energia verde, lítio e logística, o Ceará
+        está construindo as bases para um crescimento sustentado e sustentável.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-year">2025</span>
+          <h4>Lançamento da Plataforma de Hidrogênio Verde</h4>
+          <p>Lançada no World Hydrogen Summit em Roterdã, consolidando transparência e dados de energia renovável.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-year">2026</span>
+          <h4>Decisões Finais de Investimento</h4>
+          <p>Sete grandes projetos de H₂V totalizando R$ 63 bilhões atingindo o estágio de FID. Marco regulatório para
+            data centers aprovado. Avanço dos projetos de lítio na região central.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-year">2027–28</span>
+          <h4>Construção e Escala</h4>
+          <p>Construção em larga escala de usinas de hidrogênio, data centers, mineração de lítio e instalações de VEs.
+            Início das operações da ferrovia Transnordestina.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <span class="timeline-year">2029–30</span>
+          <h4>Início das Operações de Exportação</h4>
+          <p>Primeiras exportações de hidrogênio para a Europa via rota de Roterdã. Operações plenas de data centers e
+            mineração de lítio. O Ceará se torna um dos 5 maiores estados em PIB.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Risks & Opportunities -->
+    <div class="risk-oppty-grid">
+      <div class="ro-card glass-card opportunities" id="opportunities-card">
+        <h3>🚀 Oportunidades</h3>
+        <ul>
+          <li>Porto das Américas mais próximo da Europa</li>
+          <li>Rede de energia 100% renovável para a indústria</li>
+          <li>Parcerias com o Banco Mundial e Roterdã</li>
+          <li>Força de trabalho jovem e em crescimento (faixa de 18 a 24 anos como chave)</li>
+          <li>Liderança na COP 30 e visibilidade global</li>
+          <li>Hub de cabos submarinos para conectividade digital</li>
+          <li>Nova fronteira mineral: lítio na região central</li>
+          <li>Ferrovia Transnordestina integrando a logística do estado</li>
+        </ul>
+      </div>
+      <div class="ro-card glass-card risks" id="risks-card">
+        <h3>⚠️ Desafios</h3>
+        <ul>
+          <li>Marco regulatório do hidrogênio ainda em amadurecimento</li>
+          <li>Infraestrutura de transmissão de energia precisa de expansão</li>
+          <li>Necessidade de criação de demanda local (não apenas exportações)</li>
+          <li>Ambiente nacional de altas taxas de juros</li>
+          <li>Crescimento mais lento do setor industrial (0,15%)</li>
+          <li>Escassez de água nas regiões do interior</li>
+          <li>Licenciamento ambiental para mineração de lítio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOCIAL INDICATORS ===================== -->
+  <section id="social" class="section section-dark">
+    <div class="section-header">
+      <span class="section-tag">DESENVOLVIMENTO HUMANO</span>
+      <h2 class="section-title">Progresso<br /><span class="text-gradient">Social</span></h2>
+      <p class="section-desc">Por trás dos números econômicos, o Ceará está alcançando marcos históricos na redução da
+        pobreza, educação e desenvolvimento humano.</p>
+    </div>
+
+    <div class="social-grid">
+      <div class="social-card glass-card" id="poverty-card">
+        <div class="social-icon">📉</div>
+        <h3>Redução da Pobreza</h3>
+        <div class="social-big-number">
+          <span class="big-num" data-target="9.4">0</span><span class="big-unit">%</span>
+        </div>
+        <p class="social-context">A extrema pobreza caiu abaixo de 10% pela primeira vez na história. Mais de
+          <strong>400.000 pessoas</strong> saíram da extrema pobreza entre 2023-2025.
+        </p>
+      </div>
+
+      <div class="social-card glass-card" id="income-card">
+        <div class="social-icon">📈</div>
+        <h3>Crescimento da Renda</h3>
+        <div class="social-big-number">
+          <span class="big-num" data-target="12">0</span><span class="big-unit">%/ano</span>
+        </div>
+        <p class="social-context">Crescimento médio anual da renda real para os <strong>10% mais pobres</strong> da
+          população entre 2022 e 2025.</p>
+      </div>
+
+      <div class="social-card glass-card" id="education-card">
+        <div class="social-icon">🎓</div>
+        <h3>Liderança em Educação</h3>
+        <div class="social-big-number">
+          <span class="big-num">#1</span>
+        </div>
+        <p class="social-context">Líder nacional em métricas de "alfabetização na idade certa". Municípios
+          consistentemente classificados entre os <strong>melhores desempenhos educacionais do Brasil</strong>.</p>
+      </div>
+
+      <div class="social-card glass-card" id="jobs-card">
+        <div class="social-icon">💼</div>
+        <h3>Formalização de Empregos</h3>
+        <div class="social-big-number">
+          <span class="big-num" data-target="50">0</span><span class="big-unit">%+</span>
+        </div>
+        <p class="social-context">Os níveis de formalização ultrapassaram 50% da população ocupada — um marco para a
+          qualidade do trabalho e cobertura da seguridade social.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROUTES MAP ===================== -->
+  <section id="routes-map" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">INTELIGÊNCIA GEOGRÁFICA</span>
+        <h2 class="section-title">Mapa de Rotas — Sertão Central</h2>
+        <p class="section-desc">Análise interativa de distâncias, potencial econômico e oportunidades comerciais com
+          base em Fortaleza.</p>
+      </div>
+
+      <div class="map-grid">
+        <!-- Mapa -->
+        <div class="map-wrapper glass-card">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1O6UH3Pz1iOht7hreVvQLOApxJKmlgok&ehbc=2E312F"
+              allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+          <div class="map-legend">
+            A chegada da Transnordestina
+            alonga meu trajeto em 658 km no mapa, mas trazem novas oportunidades de negócios para MAKITA.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONCLUSION ===================== -->
+  <section id="conclusion" class="section">
+    <div class="conclusion-wrap">
+      <div class="conclusion-bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="conclusion-content">
+        <span class="section-tag">CONCLUSÃO</span>
+        <h2 class="conclusion-title">O Ceará não está mais<br /><span class="text-gradient">correndo atrás</span>
+          —<br />está <span class="text-gradient">liderando</span>.</h2>
+        <p class="conclusion-text">Com um PIB superando o crescimento nacional, R$ 63 bilhões em investimentos em
+          hidrogênio verde, data centers de hiperescala, turismo em expansão, a nova fronteira do lítio e a Ferrovia
+          Transnordestina conectando o interior — o Ceará está escrevendo um novo capítulo na história econômica do
+          Brasil.</p>
+        <div class="conclusion-stats">
+          <div class="conclusion-stat">
+            <span class="cs-value">2.9%</span>
+            <span class="cs-label">Crescimento do PIB (acima do nacional)</span>
+          </div>
+          <div class="conclusion-stat">
+            <span class="cs-value">R$ 63B</span>
+            <span class="cs-label">Investimentos em H₂ Verde</span>
+          </div>
+          <div class="conclusion-stat">
+            <span class="cs-value">400K+</span>
+            <span class="cs-label">Pessoas que Saíram da Pobreza</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="footer-content">
+      <p class="footer-brand">PERSPECTIVA ECONÔMICA DO CEARÁ 2026</p>
+      <p class="footer-note">Dados obtidos através de IPECE, IBGE, Banco Mundial, Complexo do Pecém, DNPM,
+        Transnordestina Logística e publicações do governo estadual. Elaborado em Julho de 2026.</p>
+      <p class="footer-copy">Felipe Montenegro</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
